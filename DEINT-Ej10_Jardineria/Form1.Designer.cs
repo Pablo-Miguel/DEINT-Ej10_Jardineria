@@ -28,20 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnAnadirProducto = new System.Windows.Forms.Button();
+            this.btnEliminarGama = new System.Windows.Forms.Button();
+            this.btnPedidosEntregados = new System.Windows.Forms.Button();
+            this.btnPrecioMasCaroBarato = new System.Windows.Forms.Button();
+            this.btnClientesQueNoPagan = new System.Windows.Forms.Button();
+            this.btnEmpleadosDeUnJefe = new System.Windows.Forms.Button();
+            this.dgJardineria = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgJardineria)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnAnadirProducto
+            // 
+            this.btnAnadirProducto.Location = new System.Drawing.Point(12, 12);
+            this.btnAnadirProducto.Name = "btnAnadirProducto";
+            this.btnAnadirProducto.Size = new System.Drawing.Size(208, 57);
+            this.btnAnadirProducto.TabIndex = 0;
+            this.btnAnadirProducto.Text = "Añadir producto";
+            this.btnAnadirProducto.UseVisualStyleBackColor = true;
+            this.btnAnadirProducto.Click += new System.EventHandler(this.btnAnadirProducto_Click);
+            // 
+            // btnEliminarGama
+            // 
+            this.btnEliminarGama.Location = new System.Drawing.Point(12, 89);
+            this.btnEliminarGama.Name = "btnEliminarGama";
+            this.btnEliminarGama.Size = new System.Drawing.Size(208, 57);
+            this.btnEliminarGama.TabIndex = 1;
+            this.btnEliminarGama.Text = "Eliminar gama";
+            this.btnEliminarGama.UseVisualStyleBackColor = true;
+            // 
+            // btnPedidosEntregados
+            // 
+            this.btnPedidosEntregados.Location = new System.Drawing.Point(12, 168);
+            this.btnPedidosEntregados.Name = "btnPedidosEntregados";
+            this.btnPedidosEntregados.Size = new System.Drawing.Size(208, 57);
+            this.btnPedidosEntregados.TabIndex = 2;
+            this.btnPedidosEntregados.Text = "Consultar pedidos entregados";
+            this.btnPedidosEntregados.UseVisualStyleBackColor = true;
+            // 
+            // btnPrecioMasCaroBarato
+            // 
+            this.btnPrecioMasCaroBarato.Location = new System.Drawing.Point(12, 402);
+            this.btnPrecioMasCaroBarato.Name = "btnPrecioMasCaroBarato";
+            this.btnPrecioMasCaroBarato.Size = new System.Drawing.Size(208, 57);
+            this.btnPrecioMasCaroBarato.TabIndex = 5;
+            this.btnPrecioMasCaroBarato.Text = "Consultar el precio del producto más caro y más barato";
+            this.btnPrecioMasCaroBarato.UseVisualStyleBackColor = true;
+            // 
+            // btnClientesQueNoPagan
+            // 
+            this.btnClientesQueNoPagan.Location = new System.Drawing.Point(12, 323);
+            this.btnClientesQueNoPagan.Name = "btnClientesQueNoPagan";
+            this.btnClientesQueNoPagan.Size = new System.Drawing.Size(208, 57);
+            this.btnClientesQueNoPagan.TabIndex = 4;
+            this.btnClientesQueNoPagan.Text = "Consultar clientes que no pagan";
+            this.btnClientesQueNoPagan.UseVisualStyleBackColor = true;
+            // 
+            // btnEmpleadosDeUnJefe
+            // 
+            this.btnEmpleadosDeUnJefe.Location = new System.Drawing.Point(12, 246);
+            this.btnEmpleadosDeUnJefe.Name = "btnEmpleadosDeUnJefe";
+            this.btnEmpleadosDeUnJefe.Size = new System.Drawing.Size(208, 57);
+            this.btnEmpleadosDeUnJefe.TabIndex = 3;
+            this.btnEmpleadosDeUnJefe.Text = "Consultar empleados de un jefe determinado";
+            this.btnEmpleadosDeUnJefe.UseVisualStyleBackColor = true;
+            // 
+            // dgJardineria
+            // 
+            this.dgJardineria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgJardineria.Location = new System.Drawing.Point(226, 12);
+            this.dgJardineria.Name = "dgJardineria";
+            this.dgJardineria.Size = new System.Drawing.Size(640, 449);
+            this.dgJardineria.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(878, 473);
+            this.Controls.Add(this.dgJardineria);
+            this.Controls.Add(this.btnPrecioMasCaroBarato);
+            this.Controls.Add(this.btnClientesQueNoPagan);
+            this.Controls.Add(this.btnEmpleadosDeUnJefe);
+            this.Controls.Add(this.btnPedidosEntregados);
+            this.Controls.Add(this.btnEliminarGama);
+            this.Controls.Add(this.btnAnadirProducto);
             this.Name = "Form1";
             this.Text = "Jardineria";
+            ((System.ComponentModel.ISupportInitialize)(this.dgJardineria)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnAnadirProducto;
+        private System.Windows.Forms.Button btnEliminarGama;
+        private System.Windows.Forms.Button btnPedidosEntregados;
+        private System.Windows.Forms.Button btnPrecioMasCaroBarato;
+        private System.Windows.Forms.Button btnClientesQueNoPagan;
+        private System.Windows.Forms.Button btnEmpleadosDeUnJefe;
+        private System.Windows.Forms.DataGridView dgJardineria;
     }
 }
 
