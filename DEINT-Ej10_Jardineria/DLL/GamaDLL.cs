@@ -21,5 +21,16 @@ namespace DEINT_Ej10_Jardineria.DLL
             SqlCommand sentencia = new SqlCommand("SELECT * FROM gama_producto");
             return conexion.EjecutarSentencia(sentencia);
         }
+
+        public DataSet getGama(string gama) {
+            SqlCommand sentencia = new SqlCommand($"SELECT * FROM gama_producto WHERE gama='{gama}'");
+            return conexion.EjecutarSentencia(sentencia);
+        }
+
+        public bool Borrar(string gama)
+        {
+            return conexion.EjecutarComandoSinRetornarDatos($"DELETE FROM gama_producto WHERE gama='{gama}'");
+        }
+
     }
 }

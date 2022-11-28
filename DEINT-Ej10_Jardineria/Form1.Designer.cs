@@ -35,6 +35,8 @@
             this.btnClientesQueNoPagan = new System.Windows.Forms.Button();
             this.btnEmpleadosDeUnJefe = new System.Windows.Forms.Button();
             this.dgJardineria = new System.Windows.Forms.DataGridView();
+            this.btnMostrarProd = new System.Windows.Forms.Button();
+            this.btnGama = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgJardineria)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +44,7 @@
             // 
             this.btnAnadirProducto.Location = new System.Drawing.Point(12, 12);
             this.btnAnadirProducto.Name = "btnAnadirProducto";
-            this.btnAnadirProducto.Size = new System.Drawing.Size(208, 57);
+            this.btnAnadirProducto.Size = new System.Drawing.Size(125, 57);
             this.btnAnadirProducto.TabIndex = 0;
             this.btnAnadirProducto.Text = "Añadir producto";
             this.btnAnadirProducto.UseVisualStyleBackColor = true;
@@ -52,10 +54,11 @@
             // 
             this.btnEliminarGama.Location = new System.Drawing.Point(12, 89);
             this.btnEliminarGama.Name = "btnEliminarGama";
-            this.btnEliminarGama.Size = new System.Drawing.Size(208, 57);
+            this.btnEliminarGama.Size = new System.Drawing.Size(125, 57);
             this.btnEliminarGama.TabIndex = 1;
             this.btnEliminarGama.Text = "Eliminar gama";
             this.btnEliminarGama.UseVisualStyleBackColor = true;
+            this.btnEliminarGama.Click += new System.EventHandler(this.btnEliminarGama_Click);
             // 
             // btnPedidosEntregados
             // 
@@ -101,11 +104,33 @@
             this.dgJardineria.Size = new System.Drawing.Size(640, 449);
             this.dgJardineria.TabIndex = 6;
             // 
+            // btnMostrarProd
+            // 
+            this.btnMostrarProd.Location = new System.Drawing.Point(143, 12);
+            this.btnMostrarProd.Name = "btnMostrarProd";
+            this.btnMostrarProd.Size = new System.Drawing.Size(77, 57);
+            this.btnMostrarProd.TabIndex = 7;
+            this.btnMostrarProd.Text = "Mostrar productos";
+            this.btnMostrarProd.UseVisualStyleBackColor = true;
+            this.btnMostrarProd.Click += new System.EventHandler(this.btnMostrarProd_Click);
+            // 
+            // btnGama
+            // 
+            this.btnGama.Location = new System.Drawing.Point(143, 89);
+            this.btnGama.Name = "btnGama";
+            this.btnGama.Size = new System.Drawing.Size(77, 57);
+            this.btnGama.TabIndex = 8;
+            this.btnGama.Text = "Mostrar gamas";
+            this.btnGama.UseVisualStyleBackColor = true;
+            this.btnGama.Click += new System.EventHandler(this.btnGama_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(878, 473);
+            this.Controls.Add(this.btnGama);
+            this.Controls.Add(this.btnMostrarProd);
             this.Controls.Add(this.dgJardineria);
             this.Controls.Add(this.btnPrecioMasCaroBarato);
             this.Controls.Add(this.btnClientesQueNoPagan);
@@ -129,6 +154,8 @@
         private System.Windows.Forms.Button btnClientesQueNoPagan;
         private System.Windows.Forms.Button btnEmpleadosDeUnJefe;
         private System.Windows.Forms.DataGridView dgJardineria;
+        private System.Windows.Forms.Button btnMostrarProd;
+        private System.Windows.Forms.Button btnGama;
     }
 }
 
