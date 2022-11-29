@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DEINT_Ej10_Jardineria.DLL
 {
@@ -25,6 +26,18 @@ namespace DEINT_Ej10_Jardineria.DLL
         public DataSet getProductos()
         {
             SqlCommand sentencia = new SqlCommand("SELECT * FROM producto");
+            return conexion.EjecutarSentencia(sentencia);
+        }
+
+        public DataSet getProductoMes(int mes)
+        {   
+            //SELECT p.* FROM producto p JOIN detalle_pedido dp ON p.codigo_producto = dp.codigo_producto JOIN pedido pd ON dp.codigo_pedido = pd.codigo_pedido WHERE MONTH(fecha_pedido)='11';
+            SqlCommand sentencia = new SqlCommand($"SELECT * FROM pedido WHERE MONTH(fecha_pedido)='{mes}';");
+            return conexion.EjecutarSentencia(sentencia);
+        }
+
+        public DataSet getProductoMasCaroYMasBarato() {
+            SqlCommand sentencia = new SqlCommand("SELECT * FROM producto WHERE precio_venta=(SELECT MAX(precio_venta) FROM producto) or precio_venta=(SELECT MIN(precio_venta) FROM producto)");
             return conexion.EjecutarSentencia(sentencia);
         }
 

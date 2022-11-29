@@ -68,6 +68,7 @@
             this.btnPedidosEntregados.TabIndex = 2;
             this.btnPedidosEntregados.Text = "Consultar pedidos entregados";
             this.btnPedidosEntregados.UseVisualStyleBackColor = true;
+            this.btnPedidosEntregados.Click += new System.EventHandler(this.btnPedidosEntregados_Click);
             // 
             // btnPrecioMasCaroBarato
             // 
@@ -77,6 +78,7 @@
             this.btnPrecioMasCaroBarato.TabIndex = 5;
             this.btnPrecioMasCaroBarato.Text = "Consultar el precio del producto más caro y más barato";
             this.btnPrecioMasCaroBarato.UseVisualStyleBackColor = true;
+            this.btnPrecioMasCaroBarato.Click += new System.EventHandler(this.btnPrecioMasCaroBarato_Click);
             // 
             // btnClientesQueNoPagan
             // 
@@ -86,6 +88,7 @@
             this.btnClientesQueNoPagan.TabIndex = 4;
             this.btnClientesQueNoPagan.Text = "Consultar clientes que no pagan";
             this.btnClientesQueNoPagan.UseVisualStyleBackColor = true;
+            this.btnClientesQueNoPagan.Click += new System.EventHandler(this.btnClientesQueNoPagan_Click);
             // 
             // btnEmpleadosDeUnJefe
             // 
@@ -95,6 +98,7 @@
             this.btnEmpleadosDeUnJefe.TabIndex = 3;
             this.btnEmpleadosDeUnJefe.Text = "Consultar empleados de un jefe determinado";
             this.btnEmpleadosDeUnJefe.UseVisualStyleBackColor = true;
+            this.btnEmpleadosDeUnJefe.Click += new System.EventHandler(this.btnEmpleadosDeUnJefe_Click);
             // 
             // dgJardineria
             // 

@@ -204,6 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(397, 294);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label9);
@@ -223,6 +224,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAnadir);
+            this.MaximizeBox = false;
             this.Name = "FormProducto";
             this.Text = "Añadir producto";
             this.ResumeLayout(false);

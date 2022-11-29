@@ -16,6 +16,7 @@ namespace DEINT_Ej10_Jardineria
         public DataGridView dgJard;
         private GamaDLL gamaDLL;
         private ProductoDLL productoDLL;
+        private ClienteDLL clienteDLL;
 
         public Form1()
         {
@@ -23,6 +24,7 @@ namespace DEINT_Ej10_Jardineria
             dgJard = this.dgJardineria;
             gamaDLL = new GamaDLL();
             productoDLL = new ProductoDLL();
+            clienteDLL = new ClienteDLL();
         }
 
         private void btnAnadirProducto_Click(object sender, EventArgs e)
@@ -45,6 +47,28 @@ namespace DEINT_Ej10_Jardineria
         {
             FormGama frmGama = new FormGama(this);
             frmGama.ShowDialog();
+        }
+
+        private void btnPedidosEntregados_Click(object sender, EventArgs e)
+        {
+            FormPedidos frmPedidos = new FormPedidos(this);
+            frmPedidos.ShowDialog();
+        }
+
+        private void btnEmpleadosDeUnJefe_Click(object sender, EventArgs e)
+        {
+            FormJefes frmJefes = new FormJefes();
+            frmJefes.ShowDialog();
+        }
+
+        private void btnPrecioMasCaroBarato_Click(object sender, EventArgs e)
+        {
+            dgJardineria.DataSource = productoDLL.getProductoMasCaroYMasBarato().Tables[0];
+        }
+
+        private void btnClientesQueNoPagan_Click(object sender, EventArgs e)
+        {
+            dgJardineria.DataSource = clienteDLL.getClientesQueNoPagan().Tables[0];
         }
     }
 }
